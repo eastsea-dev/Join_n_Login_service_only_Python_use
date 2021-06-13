@@ -1,5 +1,7 @@
-djdj,123,923,9313
-ad,123,82,92
-iii,iii,iii,iii
-asd,asd,asd,asd
-ooo,ooo,ooo,ooo
+ID,PW,NAME,BIRTH
+kim13,1245,김철수,890228
+leedh,3148,이동해,920313
+han0426,0466,한상엽,920426
+hani102,1234,한국인,971213
+testid,testpw,테스트,980613
+id123,pw123,David,990123
