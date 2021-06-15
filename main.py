@@ -37,10 +37,25 @@ def loginprocess():
 #회원가입 코드
 # !비밀번호 빈칸, 쉼표 입력시 오류 출력 필요
 def joinprocess():
-    id = input("사용하실 ID를 입력해주세요:")#나중에 중복확인까지 추가해보기
+    infile = open('cusinfo.txt', 'r')
+    idList = infile.readlines()
+    temIDlist = []
+    for i in idList:
+        temIDlist.append(i.split(',')[0])
+    infile.close()
+
+    useid = 0
+    while useid != '1':
+        id = input("사용하실 ID를 입력해주세요:")
+        while id in temIDlist:
+            print("중복된 ID입니다. 다른 ID를 입력해주세요.")
+            id = input("사용하실 ID를 입력해주세요:")
+        print("입력하신", id, "는 사용가능합니다. 사용하시겠습니까?")
+        useid = input("1.네  2.아니오:")
+
+
     pw = input("비밀번호를 입력해주세요:")
     pwre = input("비밀번호를 한 번 더 입력해주세요:")
-
     while pw != pwre:
         print("입력하신 비밀번호가 다릅니다. 다시 입력해주세요.")
         pw = input("비밀번호를 입력해주세요:")
