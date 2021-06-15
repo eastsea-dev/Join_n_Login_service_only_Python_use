@@ -1,3 +1,13 @@
+#오늘이 생일일 때 생일축하 메시지 코드
+def hbdmsg(name, bd):
+    from datetime import datetime
+    today = str(datetime.today().month) + str(datetime.today().day)
+
+    if len(today) == 3:
+        today = '0' + today
+    if today == bd[-5:-1]:
+        print(name+"님", "생일 축하합니다!")
+
 #로그인 절차 코드
 def loginprocess():
     userid = input("ID:")
@@ -12,6 +22,9 @@ def loginprocess():
             userpwcheck = item[1]
             if userpwcheck == userpw:
                 print("로그인 성공")
+                username = item[2]
+                birthday = item[3]
+                hbdmsg(username, birthday)
                 break
             else:
                 print("PW가 잘못되었습니다.")
