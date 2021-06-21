@@ -9,6 +9,7 @@ def hbdmsg(name, bd):
         print(name+"님", "생일 축하합니다!")
 
 #로그인 절차 코드
+#비밀번호 5회 오입력 시 계정 잠김 추가하기
 def loginprocess():
     userid = input("ID:")
     userpw = input("PW:")
@@ -25,6 +26,7 @@ def loginprocess():
                 username = item[2]
                 birthday = item[3]
                 hbdmsg(username, birthday)
+                #webfunction(item)
                 break
             else:
                 print("PW가 잘못되었습니다.")
@@ -35,16 +37,18 @@ def loginprocess():
         loginprocess()
 
 #회원가입 코드
-# !비밀번호 빈칸, 쉼표 입력시 오류 출력 필요
+# ID 대문자 ,특수문자 입력 시 오류 출력 필요
+# PW 빈칸, 쉼표 입력시 오류 출력 필요
 def joinprocess():
     infile = open('cusinfo.txt', 'r')
-    idList = infile.readlines()
+    idlist = infile.readlines()
     temIDlist = []
-    for i in idList:
+    for i in idlist:
         temIDlist.append(i.split(',')[0])
     infile.close()
 
     useid = 0
+    id = 0
     while useid != '1':
         id = input("사용하실 ID를 입력해주세요:")
         while id in temIDlist:

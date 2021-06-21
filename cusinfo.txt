@@ -1,8 +1,7 @@
 ID,PW,NAME,BIRTH
-kim13,1245,김철수,890228
-leedh,3148,이동해,920313
-han0426,0466,한상엽,920426
-hani102,1234,한국인,971213
-testid,testpw,테스트,980614
-id123,pw123,David,990123
-
+kim13,1234,kimdh,890228
+leedh,1234,leedh,920313
+han0426,1234,handh,920426
+hani102,1234,leehani,971213
+testid,1234,testname,980616
+id123,1234,David,990123
